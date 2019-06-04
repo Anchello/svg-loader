@@ -3,13 +3,13 @@ import { DIRECTION } from "../constatns";
 
 interface Props {
   id: string;
-  direction: string;
+  direction?: string;
 }
 
 const LinearGradient: React.FC<Props> = React.memo(
   ({id, direction}) => {
-    const x2 = direction === DIRECTION.vertical ? 100 : 0;
-    const y2 = direction === DIRECTION.vertical ? 0 : 100;
+    const x2 = direction === DIRECTION.horizontal ? 0 : 100;
+    const y2 = direction === DIRECTION.horizontal ? 100 : 0;
     return (
       <linearGradient
         x1="0%"

@@ -11,15 +11,18 @@ interface Props {
   height: number;
   direction?: string;
   reverse?: boolean;
+  backColor?: string;
+  loaderColor?: string;
+  className?: string;
 }
 
-const Index: React.FC<Props> = React.memo(
-  ({ width, height, children, direction = DIRECTION.vertical, reverse}) => {
+const SvgLoader: React.FC<Props> = React.memo(
+  ({width, height, children, direction, reverse, backColor, loaderColor, className}) => {
     const idMask = uuid.v4();
     const idGradient = uuid.v4();
     return (
       <svg
-        className="svg-loader"
+        className={classnames("svg-loader", className)}
         width={`${width}px`}
         height={`${height}px`}
         viewBox={`0 0 ${width} ${height}`}
@@ -42,8 +45,8 @@ const Index: React.FC<Props> = React.memo(
             />
           </mask>
         </defs>
-        <g className="svg-loader__path">{children}</g>
-        <g className="svg-loader__path-mask" mask={`url(#${idMask})`}>
+        <g fill={backColor}>{children}</g>
+        <g fill={loaderColor} mask={`url(#${idMask})`}>
           {children}
         </g>
       </svg>
@@ -51,4 +54,12 @@ const Index: React.FC<Props> = React.memo(
   }
 );
 
-export default Index;
+SvgLoader.defaultProps = {
+  direction: DIRECTION.vertical,
+  reverse: false,
+  backColor: "#101080",
+  loaderColor: "#347dcc"
+};
+
+
+export default SvgLoader;

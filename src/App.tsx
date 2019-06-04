@@ -1,7 +1,7 @@
 import "./App.css";
 
 import React from "react";
-import SvgLoader from "./components/svg-loader/index"
+import SvgLoader from "./components/svg-loader"
 
 const App: React.FC = () => {
   return (
