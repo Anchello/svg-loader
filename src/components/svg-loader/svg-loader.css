@@ -1,0 +1,47 @@
+.svg-loader {
+  width: 100%;
+}
+
+.svg-loader__cube {
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.svg-loader__cube--horizontal {
+  animation-name: cube-horizontal;
+}
+
+.svg-loader__cube--vertical {
+  animation-name: cube-vertical;
+}
+
+.svg-loader__cube--reverse {
+  animation-direction: reverse;
+}
+
+.svg-loader__path {
+  fill: #101080;
+}
+
+.svg-loader__path-mask {
+  fill: #347dcc;
+}
+
+@keyframes cube-horizontal {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes cube-vertical {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
