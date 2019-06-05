@@ -6,7 +6,7 @@ import classnames from "classnames";
 import LinearGradient from "../linear-gradient";
 import { DIRECTION } from "../constatns";
 
-interface Props {
+export interface SvgLoaderProps {
   width: number;
   height: number;
   direction?: string;
@@ -16,7 +16,7 @@ interface Props {
   className?: string;
 }
 
-const SvgLoader: React.FC<Props> = React.memo(
+const SvgLoader: React.FC<SvgLoaderProps> = React.memo(
   ({width, height, children, direction, reverse, backColor, loaderColor, className}) => {
     const idMask = uuid.v4();
     const idGradient = uuid.v4();

@@ -1,7 +1,13 @@
 import "./App.css";
 
 import React from "react";
-import SvgLoader from "./components/svg-loader"
+import Loader from "./loader";
+import { DIRECTION } from "./components/constatns";
+
+const SIZE = {
+  height: 70,
+  width: 350
+};
 
 const App: React.FC = () => {
   return (
@@ -11,43 +17,19 @@ const App: React.FC = () => {
       <section className="App__section">
         <div className="App__section-col">
           <h2 className="App__header">Loader with vertical direction</h2>
-          <SvgLoader height={70} width={350}>
-            <circle cx="20" cy="37" r="20"/>
-            <rect x="60" y="0" width="40" height="15" rx="8" ry="8"/>
-            <rect x="60" y="25" width="140" height="20" rx="8" ry="8"/>
-            <rect x="60" y="55" width="100" height="15" rx="8" ry="8"/>
-            <rect x="220" y="0" width="130" height="70" rx="8" ry="8"/>
-          </SvgLoader>
-        </div>
-        <div className="App__section-col">
-          <h2 className="App__header">Loader with reverse vertical direction</h2>
-          <SvgLoader height={70} width={350} direction="vertical" reverse>
-            <circle cx="20" cy="37" r="20"/>
-            <rect x="60" y="0" width="40" height="15" rx="8" ry="8"/>
-            <rect x="60" y="25" width="140" height="20" rx="8" ry="8"/>
-            <rect x="60" y="55" width="100" height="15" rx="8" ry="8"/>
-            <rect x="220" y="0" width="130" height="70" rx="8" ry="8"/>
-          </SvgLoader>
+          <Loader height={SIZE.height} width={SIZE.width} />
         </div>
         <div className="App__section-col">
           <h2 className="App__header">Loader with horizontal direction</h2>
-          <SvgLoader height={70} width={350} direction="horizontal">
-            <circle cx="20" cy="37" r="20"/>
-            <rect x="60" y="0" width="40" height="15" rx="8" ry="8"/>
-            <rect x="60" y="25" width="140" height="20" rx="8" ry="8"/>
-            <rect x="60" y="55" width="100" height="15" rx="8" ry="8"/>
-            <rect x="220" y="0" width="130" height="70" rx="8" ry="8"/>
-          </SvgLoader>
+          <Loader height={SIZE.height} width={SIZE.width} direction={DIRECTION.horizontal} />
+        </div>
+        <div className="App__section-col">
+          <h2 className="App__header">Loader with reverse vertical direction</h2>
+          <Loader height={SIZE.height} width={SIZE.width} direction={DIRECTION.vertical} reverse/>
         </div>
         <div className="App__section-col">
           <h2 className="App__header">Loader with reverse horizontal direction</h2>
-          <SvgLoader height={70} width={350} direction="horizontal" reverse>
-            <circle cx="20" cy="37" r="20"/>
-            <rect x="60" y="0" width="40" height="15" rx="8" ry="8"/>
-            <rect x="60" y="25" width="140" height="20" rx="8" ry="8"/>
-            <rect x="60" y="55" width="100" height="15" rx="8" ry="8"/>
-            <rect x="220" y="0" width="130" height="70" rx="8" ry="8"/>
-          </SvgLoader>
+          <Loader height={SIZE.height} width={SIZE.width} direction={DIRECTION.horizontal} reverse />
         </div>
       </section>
       </div>
