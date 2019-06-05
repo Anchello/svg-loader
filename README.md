@@ -19,6 +19,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
+## How to use
+
+```jsx
+const Loader = () => (
+  <SvgLoader height={70} width={350}>
+    <circle cx="20" cy="37" r="20"/>
+    <rect x="60" y="0" width="40" height="15" rx="8" ry="8"/>
+    <rect x="60" y="25" width="140" height="20" rx="8" ry="8"/>
+    <rect x="60" y="55" width="100" height="15" rx="8" ry="8"/>
+    <rect x="220" y="0" width="130" height="70" rx="8" ry="8"/>
+   </SvgLoader>
+)
+```
 
 ## Options
 
