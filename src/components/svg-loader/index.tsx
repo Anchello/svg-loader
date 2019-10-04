@@ -57,8 +57,8 @@ const SvgLoader: React.FC<SvgLoaderProps> = React.memo(
 SvgLoader.defaultProps = {
   direction: DIRECTION.vertical,
   reverse: false,
-  backColor: "#101080",
-  loaderColor: "#347dcc"
+  backColor: "#bec3d4",
+  loaderColor: "#fff"
 };
 
 
