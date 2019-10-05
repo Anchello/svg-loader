@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/svg-loader/static/css/main.2565253a.chunk.css",
+    "main.js": "/svg-loader/static/js/main.10a37792.chunk.js",
+    "main.js.map": "/svg-loader/static/js/main.10a37792.chunk.js.map",
+    "runtime~main.js": "/svg-loader/static/js/runtime~main.2b73b392.js",
+    "runtime~main.js.map": "/svg-loader/static/js/runtime~main.2b73b392.js.map",
+    "static/js/2.6e32c675.chunk.js": "/svg-loader/static/js/2.6e32c675.chunk.js",
+    "static/js/2.6e32c675.chunk.js.map": "/svg-loader/static/js/2.6e32c675.chunk.js.map",
+    "index.html": "/svg-loader/index.html",
+    "precache-manifest.7f01e8e10b8aacbec8fc6829db2901bf.js": "/svg-loader/precache-manifest.7f01e8e10b8aacbec8fc6829db2901bf.js",
+    "service-worker.js": "/svg-loader/service-worker.js",
+    "static/css/main.2565253a.chunk.css.map": "/svg-loader/static/css/main.2565253a.chunk.css.map"
+  }
+}
